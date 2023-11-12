@@ -12,7 +12,7 @@ class CommentController extends Controller
     }
 
     public function save(Request $request){
-        //Valdiacion:
+        //Validación:
         $validate = $this->validate($request,[
             'image_id' => 'integer|required',
             'content' => 'string|required'
