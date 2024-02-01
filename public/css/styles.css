@@ -1,90 +1,227 @@
-body{
+body {
     background-color: #f8fafc !important;
+    padding: 0px !important;
 }
 
-form .avatar{
+.z-index{
+    z-index: 1;
+}
+
+form .avatar {
     width: 55px;
     margin-bottom: 15px;
 }
 
+ul li {
+    list-style: none;
+}
+
+#app{
+    min-height: 100vh;
+}
+
+.remaining-tags-count {
+    margin: 0;
+}
+
+#AddedTags {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 43px;
+    max-height: 100px;
+    padding: 0.275rem 0 0.275rem 0.275rem;
+    margin: 0 0;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+#AddedTags li {
+    list-style: none;
+    margin: 1px 4px 1px 0;
+    border-radius: 5px;
+    padding: 3px 4px 3px 6px;
+    background: #3490dc;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+#AddedTags li i {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    justify-content: center;
+}
+
+#AddedTags input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0px;
+    font-size: 16px;
+}
+
+.recomended-tag-list {
+    height: 120px;
+    overflow: auto;
+}
+
+.recomended-tag-list p {
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+#tagListResponse div {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#tagListResponse div div {
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 0.3rem;
+    border: solid 1px #ced4da;
+    border-radius: 0.3rem;
+}
+
+#tagListResponse div div:hover {
+    color: white;
+    border: solid 1px white;
+    background-color: #3490dc;
+}
+
+.attached-tags {
+    width: 100%;
+}
+
+.attached-tags ul {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.attached-tags ul li {
+    padding: 2px 15px 2px 15px;
+    margin-right: 10px;
+    border: solid 1px #ced4da;
+    border-radius: 0.3rem;
+}
+
 .navbar .container-avatar,
-.pub_image .container-avatar{
+.pub_image .container-avatar {
     width: 35px;
     height: 35px;
     border-radius: 900px;
     overflow: hidden;
-    margin-left:20px;
+    margin-left: 15px;
 }
 
-img{
-    object-fit: cover;
-    width:100%;
-    height:100%;
-  }
-
 .navbar .container-avatar img,
-.pub_image .container-avatar img{
+.pub_image .container-avatar img {
     height: 100%;
 }
 
-.pub_image{
+.pub_image {
     margin-bottom: 25px;
+    width: 370px;
 }
 
-.pub_image .container-avatar{
-    float:left;
-    margin-right:15px;
+.card-header .container-avatar {
+    margin-left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 900px;
+    overflow: hidden;
+    margin-right: 15px;
 }
-.pub_image .data-user{
+
+.card-header .container-avatar img {
+    height: 100%;
+}
+
+.container-avatar {
+    float: left;
+}
+
+.data-user {
+    align-self: center;
+    width: 100%;
+    height: 80px;
+    align-self: center;
+    border-bottom: solid 1px #e7e6e6;
+    padding: 10px;
+}
+
+.data-user a {
+    margin-top: 5px;
+}
+
+.data-user-container {
+    width: 100%;
+}
+
+.pub_image .data-user {
     font-weight: bold;
     line-height: 35px;
 }
 
-.pub_image .data-user a{
+.pub_image .data-user a {
     color: #444;
 }
 
-.pub_image .nickname{
-    color:gray;
+.pub_image name {
+    color: gray;
 }
 
-.image-container{
-    width: 100%;
-    max-height: 400px;
+.card-body a img {
     overflow: hidden;
+    object-fit: cover;
+    width: 368px;
+    height: 368px;
 }
 
-.image-detail{
-    max-height: 500px;
-}
-
-.image-container img{
+.image-container {
     width: 100%;
+    display: flex;
 }
 
-.pub_image .card-body{
-    padding:0px;
+.image-container img {
+    width: 100%;
+    object-fit: cover;
 }
 
-.pub_image .description{
+.pub_image .card-body {
+    padding: 0px;
+}
+
+.pub_image .description {
     padding: 20px;
     padding-bottom: 0px;
 }
 
-.pub_image .btn-comments{
-    margin: 20px;
-    margin-top:0px;
-    margin-left:0px;
+.description {
+    padding-left: 20px;
 }
 
-.likes{
-    float:left;
-    padding-left:20px;
+.action {
+    padding-left: 20px;
+}
+
+.pub_image .btn-comments {
+    margin: 20px;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.likes {
+    float: left;
+    padding-left: 20px;
     padding-right: 10px;
     margin-bottom: 10px;
 }
 
-.likes img{
+.likes img {
     width: 25px;
 }
 
@@ -92,34 +229,94 @@ img{
     padding: 20px;
 }
 
-.number_likes{
+.number_likes {
     color: gray;
     font-size: 15;
 }
 
-.profile-user{
+.profile-user {
     height: 200px;
-    margin-bottom: 40px;
 }
 
-.profile-user .container-avatar{
+.profile-user hr {
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.profile-user .container-avatar {
     width: 200px;
     height: 200px;
     border-radius: 900px;
     overflow: hidden;
-    float:left;
+    float: left;
+    margin: 20px;
 }
-.profile-user .container-avatar img{
-   height: 100%;
+.profile-user .container-avatar img {
+    height: 100%;
 }
 
-.profile-user .user-info{
+.profile-user .user-info {
     float: left;
     padding-left: 30px;
     padding-top: 30px;
 }
 
-.btn-search{
-    margin-left: 0px;
-    padding-left: 0px;
+.footer p {
+    margin-left: 25px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 991.98px) {
+    .navbar .container-avatar {
+        align-self: flex-start;
+        width: 35px;
+        height: 35px;
+        border-radius: 900px;
+        overflow: hidden;
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+@media screen and (min-width: 993.16px) and (max-width: 1200px){
+    .pub_image{
+        width: 465px;
+    }
+
+    .card-body a img {
+        overflow: hidden;
+        object-fit: cover;
+        width: 465px;
+        height: 465px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 993.16px){
+    .pub_image{
+        width: 690px;
+    }
+
+    .card-body a img {
+        overflow: hidden;
+        object-fit: cover;
+        width: 690px;
+        height: 690px;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 768px){
+    .pub_image{
+        width: 85vh;
+    }
+
+    .card-body a img {
+        overflow: hidden;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .search-user{
+        margin-left: 0;
+        margin-right: 0;
+    }
 }

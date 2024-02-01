@@ -14,7 +14,7 @@ class LikeController extends Controller
     public function index(){
         $user = \Auth::user();
         $likes = Like::where('user_id',$user->id)->orderBy('id', 'desc')
-                              ->paginate(5);// 5 significa el numerod e registros por página
+                              ->paginate(6);// 5 significa el numerod e registros por página
         return view('like.index', [
             'likes' => $likes
         ]);

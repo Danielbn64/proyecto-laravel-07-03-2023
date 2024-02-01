@@ -1,19 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<section class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h1>Mis imagenes favoritas</h1>
-            <hr/>
-
-            @foreach($likes as $like)
-                @include('includes.image',['image' => $like->image])
-            @endforeach
-            <!--Paginación-->
-            <div class="clearfix"></div>
-            {{ $likes->links() }}
+            <hr />
         </div>
     </div>
-</div>
+    <div class="d-flex flex-wrap">
+        @foreach($likes as $like)
+        @include('includes.image',['image' => $like->image])
+        @endforeach
+    </div>
+    <!--Paginación-->
+    <div class="d-flex justify-content-center">
+        {{ $likes->links() }}
+    </div>
+</section>
 @endsection

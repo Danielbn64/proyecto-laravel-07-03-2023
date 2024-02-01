@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\RedirectResponseRedirectResponseredirect;
 use App\Image;
+use App\User;
 use App\Comment;
 use App\Like;
 
@@ -62,8 +64,10 @@ class ImageController extends Controller
     public function detail($id)
     {
         $image = Image::find($id);
+        $user = User::find($image->user_id);
         return view('image.detail', [
-            'image' => $image
+            'image' => $image,
+            'user' => $user
         ]);
     }
 
@@ -73,47 +77,71 @@ class ImageController extends Controller
         $image = Image::find($id);
         $comments = Comment::where('image_id', $id)->get();
         $likes = Like::where('image_id', $id)->get();
+        try {
+            if ($user && $image && $image->user->id == $user->id || $user->role == "admin") {
 
-        if ($user && $image && $image->user->id == $user->id) {
-
-            // Eliminar comentarios
-            if ($comments && count($comments) >= 1) {
-                foreach ($comments as $comment) {
-                    $comment->delete();
+                // Eliminar comentarios
+                if ($comments && count($comments) >= 1) {
+                    foreach ($comments as $comment) {
+                        $comment->delete();
+                    }
                 }
+
+                // Eliminar los likes
+                if ($likes && count($likes) >= 1) {
+                    foreach ($likes as $like) {
+                        $like->delete();
+                    }
+                }
+
+                // Eliminar ficheros de imagen
+                Storage::disk('images')->delete($image->image_path);
+
+                //Eliminar relación cn las etiquetas:
+                $image->tags()->detach();
+
+                // Eliminar registro imagen
+                $image->delete();
+
+                $message = array('message' => 'La imagen se ha borrado correctamente.');
+            } else {
+                $message = array('message' => 'La imagen no se ha borrado.');
             }
 
-            // Eliminar los likes
-            if ($likes && count($likes) >= 1) {
-                foreach ($likes as $like) {
-                    $like->delete();
-                }
-            }
-
-            // Eliminar ficheros de imagen
-            Storage::disk('images')->delete($image->image_path);
-
-            // Eliminar registro imagen
-            $image->delete();
-
-            $message = array('message' => 'La imagen se ha borrado correctamente.');
-        } else {
-            $message = array('message' => 'La imagen no se ha borrado.');
+            return redirect()->route('home')->with($message);
+        } catch (\Exception $e) {
+            \Log::error($e->getMessage());
         }
-    
-        return redirect()->route('home')->with($message);
     }
 
     public function edit($id)
     {
         $user = \Auth::user();
         $image = Image::find($id);
-        if ($user && $image && $image->user->id == $user->id) {
-            return view('image.edit', [
+        if ($user && $image && $image->user->id == $user->id || $user->role == "admin") {
+            return view('image.edit_image', [
                 'image' => $image
             ]);
         } else {
-            return view('image.edit');
+            return redirect()->route('login');
+        }
+    }
+
+    public function editDescription(Request $request)
+    {
+        $user = \Auth::user();
+        $image_id = $request->input('imageIdDescription');
+        $image = Image::find($image_id);
+        $description_edit = $request->input('descriptionEdit');
+
+        if ($user && $image->user->id == $user->id || $user->role == "admin") {
+            $image->description = $description_edit;
+            $image->update();
+            $message = array('message' => 'La imagen se ha editado correctamente.');
+            return redirect()->route('home')->with($message);
+        } else {
+            $message = array('message' => 'La imagen no se ha editado correctamente.');
+            return redirect()->route('home')->with($message);
         }
     }
 }

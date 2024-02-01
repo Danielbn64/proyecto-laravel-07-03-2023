@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class FormatTimeServiceProvider extends ServiceProvider
+class BladeServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap services.
@@ -23,6 +23,6 @@ class FormatTimeServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        require_once app_path(). '/helpers/FormatTime.php';
+        //
     }
 }

@@ -6,7 +6,7 @@
         <div class="col-md-8">
 		<h1>Perfiles</h1>
 		<form method="GET" action="{{ route('user.index')}}" id="buscador">
-			<div class="row">
+			<div class="row search-user">
 				<div class="form-group col btn-search">
 					<input type="text" id="search" class="form-control">	
 				</div>
@@ -22,6 +22,10 @@
 					<div class="container-avatar">
 						<img src="{{ route('user.avatar',['filename'=>$user->image]) }}" class="avatar" />
 					</div>
+				@else
+				<div class="container-avatar">
+					<img src="{{ asset('img/user_placeholder.png') }}" />
+				</div>
 				@endif
 				
 				<div class="user-info">

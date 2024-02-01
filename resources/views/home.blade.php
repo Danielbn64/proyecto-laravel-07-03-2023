@@ -1,17 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            @include('includes.message')
-            @foreach($images as $image)
-                @include('includes.image',['image' => $image])
-            @endforeach
-            <!--Paginación-->
-            <div class="clearfix"></div>
-            {{ $images->links() }}
-        </div>
+<section class="container">
+    @include('includes.message')
+    <div class="d-flex flex-wrap">
+        @foreach($images as $image)
+            @include('includes.image',['image' => $image])
+        @endforeach
     </div>
-</div>
+    <div class="d-flex justify-content-center">
+        {{ $images->links() }}
+    </div>
+</section>
 @endsection

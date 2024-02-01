@@ -1,24 +1,29 @@
 <div class="card pub_image">
     <div class="card-header">
-        @if($image->user->image)
-        <div class="container-avatar">
-            <img class="cover" src="{{ route('user.avatar',['filename'=>$image->user->image]) }}" class="avatar">
-        </div>
-        @endif
         <div class="data-user">
+            @if($image->user->image)
+            <div class="container-avatar">
+                <img class="cover" src="{{ route('user.avatar',['filename'=>$image->user->image]) }}" class="avatar">
+            </div>
+            @else
+            <div class="container-avatar">
+                <img src="{{ asset('img/user_placeholder.png') }}" />
+            </div>
+            @endif
             <a href="{{ route('profile', ['id' => $image->user->id]) }}">
-                {{ $image->user->name.' '.$image->user->surname }}
-                <span class="nickname">
-                    {{ '  @'.$image->user->nick }}
-                </span>
+                <div>
+                    <span class="nickname">
+                        {{ '  @'.$image->user->nick }}
+                    </span>
+                </div>
             </a>
         </div>
-
     </div>
     <div class="card-body">
-        <img class="cover" src="{{ route('image.file',['filename' => $image->image_path]) }}">
+        <a href="{{ route('image.detail', ['id' => $image->id]) }}">
+            <img src="{{ route('image.file',['filename' => $image->image_path]) }}" alt="image">
+        </a>
     </div>
-
     <div class="description">
         <span class="nickname">{{ '@'.$image->user->nick }}</span>
         <span class="nickname date">{{ ' | '.\FormatTime::LongTimeFilter($image->created_at) }}</span>
@@ -41,7 +46,7 @@
         <span class="number_likes">{{count($image->likes)}}</span>
     </div>
     <div class="comments">
-        <a href="{{ route('image.detail', ['id' => $image->id]) }}" class="btn btn-sm btn-warning btn-comments">
+        <a href="{{ route('image.detail', ['id' => $image->id]) }}" class="btn btn-sm btn-light btn-comments">
             Comentarios {{count($image->comments)}}
         </a>
     </div>

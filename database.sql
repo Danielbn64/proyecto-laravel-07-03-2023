@@ -20,6 +20,35 @@ INSERT INTO users VALUES(NULL, 'user', 'Víctor', 'Robles', 'victorroblesweb', '
 INSERT INTO users VALUES(NULL, 'user', 'Juan', 'Lopez', 'juanlopez', 'juan@juan.com', 'pass', null, CURTIME(), CURTIME(), NULL);
 INSERT INTO users VALUES(NULL, 'user', 'Manolo', 'Garcia', 'manologarcia', 'manolo@manolo.com', 'pass', null, CURTIME(), CURTIME(), NULL);
 
+CREATE TABLE IF NOT EXISTS tags(
+id              int(255) auto_increment not null,
+tags            varchar(255),
+CONSTRAINT pk_tags PRIMARY KEY(id)
+)ENGINE=InnoDb;
+
+INSERT INTO tags VALUES(NULL,'cielo');
+INSERT INTO tags VALUES(NULL,'persona');
+INSERT INTO tags VALUES(NULL,'montaña');
+INSERT INTO tags VALUES(NULL,'pajaro');
+INSERT INTO tags VALUES(NULL,'angel');
+INSERT INTO tags VALUES(NULL,'angeles');
+INSERT INTO tags VALUES(NULL,'arte');
+INSERT INTO tags VALUES(NULL,'pintura');
+INSERT INTO tags VALUES(NULL,'buho');
+INSERT INTO tags VALUES(NULL,'puente');
+INSERT INTO tags VALUES(NULL,'francia');
+INSERT INTO tags VALUES(NULL,'lago');
+INSERT INTO tags VALUES(NULL,'mariposa');
+INSERT INTO tags VALUES(NULL,'roca');
+
+CREATE TABLE IF NOT EXISTS images_tags(
+tag_id          int not null,
+image_id        int not null,
+CONSTRAINT pk_images_tags PRIMARY KEY(tag_id, image_id),
+CONSTRAINT fk_images_tags_tags FOREIGN KEY(tag_id) REFERENCES tags(id),
+CONSTRAINT fk_images_tags_images FOREIGN KEY(image_id) REFERENCES images(id)
+)ENGINE=InnoDb;
+
 CREATE TABLE IF NOT EXISTS images(
 id              int(255) auto_increment not null,
 user_id         int(255),

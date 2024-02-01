@@ -47,7 +47,7 @@ class CommentController extends Controller
         $comment = Comment::find($id);
 
         //Comprobar si soy el dueño del comentario o de la publicacion
-        if($user && ($comment->user_id == $user->id || $comment->image->user_id == $user->id)){
+        if($user && ($comment->user_id == $user->id || $comment->image->user_id == $user->id || $user->role == 'admin')){
             $comment->delete();
             
             return redirect()->route('image.detail',['id' => $comment->image->id])
