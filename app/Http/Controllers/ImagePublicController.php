@@ -21,7 +21,8 @@ class ImagePublicController extends Controller
         return response($file, 200);
     }
 
-    public function publicIndex($id){
+    public function publicIndex($id)
+    {
         $image = Image::find($id);
         $user = User::find($image->user_id);
         return view('image.public_detail', [
@@ -31,14 +32,14 @@ class ImagePublicController extends Controller
     }
 
     public function downloadImage($filename)
-{
-    $file = Storage::disk('images')->get($filename);
-    $response = response($file, 200);
+    {
+        $file = Storage::disk('images')->get($filename);
+        $response = response($file, 200);
 
-    // Agregar encabezados para la descarga del archivo
-    $response->header('Content-Type', 'image/jpeg'); // Ajusta el tipo de contenido según el tipo de imagen
-    $response->header('Content-Disposition', 'attachment; filename="' . $filename . '"');
+        // Agregar encabezados para la descarga del archivo
+        $response->header('Content-Type', 'image/jpeg'); // Ajusta el tipo de contenido según el tipo de imagen
+        $response->header('Content-Disposition', 'attachment; filename="' . $filename . '"');
 
-    return $response;
-}
+        return $response;
+    }
 }

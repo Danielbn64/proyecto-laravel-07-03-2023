@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="Expires" content="4000">
 
     <title>LaraPicture</title>
 
@@ -18,13 +19,11 @@
 </head>
 
 <body>
-    <div>
-        @include('includes.public-navigation')
-        <main>
-            @include('includes.photo-stock')
-        </main>
-        @include('includes.footer')
-    </div>
+    @include('includes.public-navigation')
+    <main>
+        @include('includes.photo-stock')
+    </main>
+    @include('includes.footer')
 </body>
 
 </html>

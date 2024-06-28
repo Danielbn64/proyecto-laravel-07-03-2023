@@ -1,5 +1,5 @@
-<script src="{{ asset('js/photo-stock.js') }}" defer="defer"></script>
 @include('includes.message')
+<script type="text/javascript" src="{{ asset('js/photo-stock-preloader.js')}}" defer="defer"></script>
 <section class="d-flex flex-column justify-content-center hero">
     <form class="d-flex search-wrapper" method="POST" action="{{ route('stock.search')}}" id="buscador">
         <div class="form-group col search">
@@ -10,50 +10,14 @@
         </div>
     </form>
 </section>
-<section class="images-gallery d-flex">
-    <div class="column-1">
-        @foreach($images as $image)
-        <figure class="image-public-container">
-            <a href="{{ route('detail.public',['id' => $image->id]) }}">
-                <img loading="lazy" class="image-sizes" src="{{ route('image.stock',['filename' => $image->image_path])}}">
-            </a>
-        </figure>
-        @if($loop->index == 10)
-        @break
-        @endif
-        @endforeach
-    </div>
-    <div class="column-2">
-        @foreach($images as $image)
-        @if($loop->index >= 11 && $loop->index < 22) <figure class="image-public-container">
-            <a href="{{ route('detail.public',['id' => $image->id]) }}">
-                <img loading="lazy" class="image-sizes" src="{{ route('image.stock',['filename' => $image->image_path])}}">
-            </a>
-            </figure>
-            @endif
-            @endforeach
-    </div>
-    <div class="column-3">
-        @foreach($images as $image)
-        @if($loop->index >= 22 && $loop->index < 34) <figure class="image-public-container">
-            <a href="{{ route('detail.public',['id' => $image->id]) }}">
-                <img loading="lazy" class="image-sizes" src="{{ route('image.stock',['filename' => $image->image_path])}}">
-            </a>
-            </figure>
-            @endif
-            @endforeach
-    </div>
-    <div class="column-4">
-        @foreach($images as $image)
-        @if($loop->index >= 34 && $loop->index < 45) <figure class="image-public-container">
-            <a href="{{ route('detail.public',['id' => $image->id]) }}">
-                <img loading="lazy" class="image-sizes" src="{{ route('image.stock',['filename' => $image->image_path])}}">
-            </a>
-            </figure>
-            @endif
-            @endforeach
-    </div>
-    </div>
+<section class="images-gallery">
+    @foreach($images as $image)
+    <a href="{{ route('detail.public',['id' => $image->id]) }}">
+        <div class="skeleton-loader">
+            <img loading="lazy" class="image-sizes" src="{{ route('image.stock',['filename' => $image->image_path])}}">
+        </div>
+    </a>
+    @endforeach
 </section>
 <div class="d-flex justify-content-center">
     {{ $images->links() }}

@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap");
-
 html {
     max-width: 100% !important;
     overflow-x: hidden !important;
     box-sizing: border-box;
+    height: 100%;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     background-color: #fff;
     color: #636b6f;
     font-family: "Titillium Web", sans-serif;
@@ -36,30 +38,57 @@ body {
 }
 
 .image-public-container {
-    width: 300px;
+    position: relative;
+    overflow: hidden;
 }
 
 .image-sizes {
-    object-fit: cover;
     width: 100%;
-    cursor: zoom-in;
+    height: auto;
+    display: block;
+    padding-bottom: 10px;
+    opacity: 0;
+}
+
+.skeleton-loader{
+    display: block;
+    position: relative;
+    background-color: #e7e7e7;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .images-gallery {
-    padding-top: 10px;
-    align-self: center;
+    columns: 4 300px;
+    gap: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
-.column-1,
-.column-2,
-.column-3,
-.column-4 {
-    flex-basis: 0;
-    max-width: 100%;
-    position: relative;
-    width: 100%;
-    margin-left: 10px;
-    margin-right: 5px;
+.loaded .image-sizes {
+    opacity: 1;
+}
+
+.loaded .skeleton-loader {
+    animation: pulse-end 1s;
+    background-color: #fff;
+}
+
+@keyframes pulse-end {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .fg-0 {
@@ -91,12 +120,12 @@ body {
 
 .image-detail-container {
     height: 100vh;
-    align-items:baseline;
+    align-items: baseline;
 }
 
 .image-detail {
     margin-top: 50px;
-    max-width: 100%;
+    max-width: 80%;
     max-height: 100%;
     width: auto;
     height: auto;
@@ -106,7 +135,7 @@ body {
 .options-wrapper {
     position: absolute;
     z-index: 0;
-    top:60px;
+    top: 60px;
     border: solid 1px #e7e6e6;
     border-radius: 20px 10px 10px 20px;
     background-color: #fff;
