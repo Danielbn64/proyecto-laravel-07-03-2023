@@ -7,33 +7,33 @@ Puedes ver la aplicación desplegada en el siguiente enlace: https://larapicture
 ## Funcionalidad
 ## Parte publica:
 - Pantalla de inicio:
-  1) lista todas las imagenes subidas por los usuarios en formato masonry.
-  2) Buscador de imagenes por palabras clave.
-  3) Barra de navegación con opciones de inicio de sesión registro, y enlace al inicio.
+  1) Lista todas las imágenes subidas por los usuarios en formato masonry.
+  2) Buscador de imágenes por palabras clave.
+  3) Barra de navegación con opciones de inicio de sesión, registro, y enlace al inicio.
 
 ![Larapictures](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/7eaabd02-5261-46d6-bb13-ccd29e12cb96)
 
-- Detalle de imagen seleccinada, visualisación de numero de likes, numero de comentarios y botón de descargar.
+- Detalle de imagen seleccionada, visualización de número de likes, número de comentarios y botón de descargar.
 
 ![vista_de_detalle_y_descarga_de_imagen](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/ccf28b65-595f-4064-8aa1-e222967dcafc)
 
 ## Parte privada:
 - Menú de usuario con las siguientes opciones:
-  1) Mi perfil
-  2) Configuración
-  3) Cerrar sesión
-  4) Subir imagen
-  5) Favoritas
-  6) Buscar persona
-  7) Cuenta
-  8) Inicio
+  1) Mi perfil.
+  2) Configuración.
+  3) Cerrar sesión.
+  4) Subir imagen.
+  5) Favoritas.
+  6) Buscar persona.
+  7) Cuenta.
+  8) Inicio.
      
 - Mi perfil:
-  Listado de todas las imagenes subidas por el usuario.
+  Listado de todas las imágenes subidas por el usuario.
 ![Larapicture_captura1](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/235c20cb-db15-4dde-8706-35e4b097b7f4)
 
 - Configuración de usuario:
-  Permite cambiar nombre nickname foto de perfil y contraseña.
+  Permite cambiar nombre, nickname foto de perfil y contraseña.
 ![Larapictures_captura](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/52635afb-fa4c-4d92-8198-e7decb7fc002)
 
 - Inicio de sesión con email y contraseña.
@@ -45,12 +45,12 @@ Puedes ver la aplicación desplegada en el siguiente enlace: https://larapicture
 ![Larapictures_captura4](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/8ff34fd4-2156-4b6e-a1a7-cfdd3aa6f78e)
 
 - Buscar persona:
-  Listado de usuarios registrados en la aplicación, buscador de usuarios por nombre apellido o nickname, ver perfil, opción de ver las imagenes subidas por un
+  Listado de usuarios registrados en la aplicación, buscador de usuarios por nombre, apellido o nickname, ver perfil, opción de ver las imágenes subidas por un
   usuario en concreto.
 
 ![Larapictures_captura2](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/2355ee94-04a9-4fd5-8500-99edeac22db4)
 
-- Vista de subida de imagen, con opcion de añadir una descripción. 
+- Vista de subida de imagen, con opción de añadir una descripción. 
 
 ![subida_de_imagen](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/ff0ad52b-e59d-4eda-a4d9-da1dca6cee12)
 
@@ -58,7 +58,7 @@ Puedes ver la aplicación desplegada en el siguiente enlace: https://larapicture
 
 ![Comentarios_y_opciones_de_imagen](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/97132d78-2d67-4838-b6d1-8ee34c8e70d6)
 
-- Vista de edición de imagenes opción de editar descripción y ventana modal para adjuntar etiquetas a la imagen.
+- Vista de edición de imágenes opción de editar descripción y ventana modal para adjuntar etiquetas a la imagen.
 
 ![vista_de_edición_de_imagenes](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/374ed19c-fa74-46cb-a4be-a2d1b82f0a7f)
 
