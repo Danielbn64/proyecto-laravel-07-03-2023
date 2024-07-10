@@ -44,7 +44,9 @@ Puedes ver la aplicación desplegada en el siguiente enlace: https://larapicture
 
 ![Larapictures_captura4](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/8ff34fd4-2156-4b6e-a1a7-cfdd3aa6f78e)
 
-- Buscar persona: 
+- Buscar persona:
+  Listado de usuarios registrados en la aplicación, buscador de usuarios por nombre apellido o nickname, ver perfil, opción de ver las imagenes subidas por un
+  usuario en concreto.
 
 ![Larapictures_captura2](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/2355ee94-04a9-4fd5-8500-99edeac22db4)
 
