@@ -2,6 +2,8 @@ https://larapictures.website/
 
 ![Larapictures](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/7eaabd02-5261-46d6-bb13-ccd29e12cb96)
 
+![vista_de_detalle_y_descarga_de_imagen](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/ccf28b65-595f-4064-8aa1-e222967dcafc)
+
 ![Larapicture_captura1](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/235c20cb-db15-4dde-8706-35e4b097b7f4)
 
 ![Larapictures_captura](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/52635afb-fa4c-4d92-8198-e7decb7fc002)
@@ -13,8 +15,6 @@ https://larapictures.website/
 ![Larapictures_captura2](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/2355ee94-04a9-4fd5-8500-99edeac22db4)
 
 ![subida_de_imagen](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/ff0ad52b-e59d-4eda-a4d9-da1dca6cee12)
-
-![vista_de_detalle_y_descarga_de_imagen](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/ccf28b65-595f-4064-8aa1-e222967dcafc)
 
 ![Comentarios_y_opciones_de_imagen](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/97132d78-2d67-4838-b6d1-8ee34c8e70d6)
 
