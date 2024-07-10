@@ -14,7 +14,7 @@ Puedes ver la aplicación desplegada en el siguiente enlace: https://larapicture
 ![Larapictures](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/7eaabd02-5261-46d6-bb13-ccd29e12cb96)
 
 - Detalle de imagen seleccinada, visualisación de numero de likes, numero de comentarios y botón de descargar.
-- 
+
 ## Parte privada:
 ![vista_de_detalle_y_descarga_de_imagen](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/ccf28b65-595f-4064-8aa1-e222967dcafc)
 
