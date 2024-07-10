@@ -50,11 +50,19 @@ Puedes ver la aplicación desplegada en el siguiente enlace: https://larapicture
 
 ![Larapictures_captura2](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/2355ee94-04a9-4fd5-8500-99edeac22db4)
 
+- Vista de subida de imagen, con opcion de añadir una descripción. 
+
 ![subida_de_imagen](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/ff0ad52b-e59d-4eda-a4d9-da1dca6cee12)
+
+- Detalles de imagen con opciones de editar y borrar si es una imagen subida por el propio usuario y dar me gusta si es una imagen subida por otro usuario.
 
 ![Comentarios_y_opciones_de_imagen](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/97132d78-2d67-4838-b6d1-8ee34c8e70d6)
 
+- Vista de edición de imagenes opción de editar descripción y ventana modal para adjuntar etiquetas a la imagen.
+
 ![vista_de_edición_de_imagenes](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/374ed19c-fa74-46cb-a4be-a2d1b82f0a7f)
+
+- Esquema de la base de datos.
 
 ![diagrama_modelo_relacional_larapictures](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/a8c171e8-9a87-4ff0-94bc-4c9f4899114f)
 
