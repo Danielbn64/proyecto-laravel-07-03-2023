@@ -1,7 +1,20 @@
-https://larapictures.website/
+## Banco de imagenes
+
+Galeria de imagenes online, PHP v7.4.33, Laravel v5.6.40 y MySQLWorbench v8.
+
+Puedes ver la aplicación desplegada en el siguiente enlace: https://larapictures.website/
+
+## Funcionalidad
+# Parte publica:
+- Pantalla de inicio:
+  1) lista todas las imagenes subidas por los usuarios en formato masonry.
+  2) Buscador de imagenes por palabras clave.
+  3) Barra de navegación con opciones de inicio de sesión registro, y enlace al inicio.
 
 ![Larapictures](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/7eaabd02-5261-46d6-bb13-ccd29e12cb96)
 
+- Detalle de imagen seleccinada, visualisación de numero de likes, numero de comentarios y botón de descargar.
+- 
 ![vista_de_detalle_y_descarga_de_imagen](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/ccf28b65-595f-4064-8aa1-e222967dcafc)
 
 ![Larapicture_captura1](https://github.com/Danielbn64/proyecto-laravel-07-03-2023/assets/98886911/235c20cb-db15-4dde-8706-35e4b097b7f4)
