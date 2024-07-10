@@ -1,11 +1,11 @@
-## Banco de imagenes
+# Banco de imagenes
 
 Galeria de imagenes online, PHP v7.4.33, Laravel v5.6.40 y MySQLWorbench v8.
 
 Puedes ver la aplicación desplegada en el siguiente enlace: https://larapictures.website/
 
 ## Funcionalidad
-# Parte publica:
+## Parte publica:
 - Pantalla de inicio:
   1) lista todas las imagenes subidas por los usuarios en formato masonry.
   2) Buscador de imagenes por palabras clave.
