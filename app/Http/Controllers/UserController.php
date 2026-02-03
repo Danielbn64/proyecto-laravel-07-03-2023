@@ -47,8 +47,8 @@ class UserController extends Controller
         $validate = $this->validate($request, [
             'name' => 'required|string|max:255',
             'surname' => 'required|string|max:255',
-            'nick' => 'required|string|max:255|unique:users,nick,' . $id, //Exepcion que el nick coincida
-            //con el nick del id del usuario correspondiente
+            'nick' => 'required|string|max:255|unique:users,nick,' . $id, //Exepcion que el nick coincida con el nick del id del usuario correspondiente
+            'image_path' => 'required|mimes:jpg,jpeg,png,gif|max:2000000',
         ]);
         //Recojer los datos del formulario
         $name = $request->input('name');

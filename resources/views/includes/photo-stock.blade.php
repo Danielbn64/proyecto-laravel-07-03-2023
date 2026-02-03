@@ -1,6 +1,7 @@
 @include('includes.message')
 <script type="text/javascript" src="{{ asset('js/photo-stock-preloader.js')}}" defer="defer"></script>
 <section class="d-flex flex-column justify-content-center hero">
+    <img class="hero-image" src="{{ asset('img/hero_image.jpg')}}" />
     <form class="d-flex search-wrapper" method="POST" action="{{ route('stock.search')}}" id="buscador">
         <div class="form-group col search">
             <input type="text" id="search" name="search" class="form-control">
